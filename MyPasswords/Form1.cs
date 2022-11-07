@@ -45,7 +45,7 @@ namespace MyPasswords
         private void FillDataGridView() {
             try
             {
-                if (String.IsNullOrEmpty(txt_Search.Text))
+                if (string.IsNullOrEmpty(txt_Search.Text))
                 {
                     ds = null;
                     ds = new DataSet();
@@ -236,30 +236,38 @@ namespace MyPasswords
                     {
                         case 0:
                             DataSet ds_name = new DataSet();
-                            SQLiteDataAdapter da = new SQLiteDataAdapter("select ID,name,url,username,password from Link where name like '%" + txt_Search.Text + "%'", con);
+                            SQLiteDataAdapter da = new SQLiteDataAdapter("select ID,name,url,username,password ,description from Link where name like '%" + txt_Search.Text + "%'", con);
                             da.Fill(ds_name);
                             da.Dispose();
                             DataColumnCollection col = ds_name.Tables[0].Columns;
                             dataGridView1.Rows.Clear();
                             for (int i = 0; i < ds_name.Tables[0].Rows.Count; i++)
                             {
-                                dataGridView1.Rows.Add(ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("ID")].ToString(), ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("name")].ToString(), ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("url")].ToString(),
-                                    ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("username")].ToString(), ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("password")].ToString());
+                                dataGridView1.Rows.Add(ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("ID")].ToString(),
+                                    ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("name")].ToString(),
+                                    ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("url")].ToString(),
+                                    ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("username")].ToString(),
+                                    ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("password")].ToString(),
+                                    ds_name.Tables[0].Rows[i].ItemArray[col.IndexOf("description")].ToString());
                             }
                             tsl_count.Text = ds_name.Tables[0].Rows.Count.ToString();
                             break;
 
                         case 1:
                             DataSet ds_username = new DataSet();
-                            SQLiteDataAdapter daa = new SQLiteDataAdapter("select ID,name,url,username,password from Link where username like '%" + txt_Search.Text + "%'", con);
+                            SQLiteDataAdapter daa = new SQLiteDataAdapter("select ID,name,url,username,password ,description from Link description username like '%" + txt_Search.Text + "%'", con);
                             daa.Fill(ds_username);
                             daa.Dispose();
                             DataColumnCollection coll = ds_username.Tables[0].Columns;
                             dataGridView1.Rows.Clear();
                             for (int i = 0; i < ds_username.Tables[0].Rows.Count; i++)
                             {
-                                dataGridView1.Rows.Add(ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("ID")].ToString(), ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("name")].ToString(), ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("url")].ToString(),
-                                     ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("username")].ToString(), ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("password")].ToString());
+                                dataGridView1.Rows.Add(ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("ID")].ToString(),
+                                    ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("name")].ToString(),
+                                    ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("url")].ToString(),
+                                     ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("username")].ToString(),
+                                     ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("password")].ToString(),
+                                     ds_username.Tables[0].Rows[i].ItemArray[coll.IndexOf("description")].ToString());
                             }
                             tsl_count.Text = ds_username.Tables[0].Rows.Count.ToString();
                             break;
