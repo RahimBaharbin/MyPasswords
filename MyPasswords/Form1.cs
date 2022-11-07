@@ -226,6 +226,7 @@ namespace MyPasswords
                 if (string.IsNullOrEmpty(txt_Search.Text))
                 {
                     FillDataGridView();
+                    ClearTextBox();
                     txt_Search.Select();
                     return;
                 }

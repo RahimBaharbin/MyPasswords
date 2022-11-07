@@ -29,13 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datagrid_cms = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setUserNameInClipBordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,14 +91,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.timer_auto_clipbord = new System.Windows.Forms.Timer(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.txt_Description = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.link = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.datagrid_cms.SuspendLayout();
             this.Form_cms.SuspendLayout();
@@ -139,6 +139,62 @@
             this.dataGridView1.Size = new System.Drawing.Size(753, 272);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            this.id.Width = 46;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
+            this.name.DefaultCellStyle = dataGridViewCellStyle1;
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // link
+            // 
+            this.link.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
+            this.link.DefaultCellStyle = dataGridViewCellStyle2;
+            this.link.HeaderText = "Login Link";
+            this.link.Name = "link";
+            this.link.ReadOnly = true;
+            // 
+            // username
+            // 
+            this.username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
+            this.username.DefaultCellStyle = dataGridViewCellStyle3;
+            this.username.HeaderText = "User Name";
+            this.username.Name = "username";
+            this.username.ReadOnly = true;
+            // 
+            // password
+            // 
+            this.password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
+            this.password.DefaultCellStyle = dataGridViewCellStyle4;
+            this.password.HeaderText = "Password";
+            this.password.Name = "password";
+            this.password.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Visible = false;
+            this.Description.Width = 105;
             // 
             // datagrid_cms
             // 
@@ -341,6 +397,7 @@
             this.id_rows.Name = "id_rows";
             this.id_rows.Size = new System.Drawing.Size(65, 20);
             this.id_rows.Text = "Rows ID : ";
+            this.id_rows.Visible = false;
             // 
             // db_dir
             // 
@@ -349,6 +406,7 @@
             this.db_dir.Padding = new System.Windows.Forms.Padding(20, 0, 5, 0);
             this.db_dir.Size = new System.Drawing.Size(62, 20);
             this.db_dir.Text = "db_dir";
+            this.db_dir.Visible = false;
             this.db_dir.Click += new System.EventHandler(this.db_dir_Click);
             // 
             // bt_insert
@@ -364,18 +422,17 @@
             // 
             // txt_username
             // 
-            this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_username.Font = new System.Drawing.Font("IRANSansWeb", 8.749999F);
             this.txt_username.ForeColor = System.Drawing.Color.Red;
             this.txt_username.Location = new System.Drawing.Point(426, 33);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(158, 20);
+            this.txt_username.Size = new System.Drawing.Size(158, 27);
             this.txt_username.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(428, 3);
+            this.label5.Location = new System.Drawing.Point(428, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 22);
             this.label5.TabIndex = 15;
@@ -383,18 +440,17 @@
             // 
             // txt_password
             // 
-            this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_password.Font = new System.Drawing.Font("IRANSansWeb", 8.749999F);
             this.txt_password.ForeColor = System.Drawing.Color.Red;
             this.txt_password.Location = new System.Drawing.Point(590, 33);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(151, 20);
+            this.txt_password.Size = new System.Drawing.Size(151, 27);
             this.txt_password.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(591, 3);
+            this.label4.Location = new System.Drawing.Point(591, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 22);
             this.label4.TabIndex = 13;
@@ -402,19 +458,18 @@
             // 
             // txt_link
             // 
-            this.txt_link.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_link.Font = new System.Drawing.Font("IRANSansWeb", 8.749999F);
             this.txt_link.ForeColor = System.Drawing.Color.Red;
             this.txt_link.Location = new System.Drawing.Point(154, 33);
             this.txt_link.Multiline = true;
             this.txt_link.Name = "txt_link";
-            this.txt_link.Size = new System.Drawing.Size(266, 20);
+            this.txt_link.Size = new System.Drawing.Size(258, 27);
             this.txt_link.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(159, 3);
+            this.label3.Location = new System.Drawing.Point(159, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 22);
             this.label3.TabIndex = 11;
@@ -422,18 +477,17 @@
             // 
             // txt_name
             // 
-            this.txt_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_name.Font = new System.Drawing.Font("IRANSansWeb", 8.749999F);
             this.txt_name.ForeColor = System.Drawing.Color.Red;
             this.txt_name.Location = new System.Drawing.Point(5, 33);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(143, 20);
+            this.txt_name.Size = new System.Drawing.Size(143, 27);
             this.txt_name.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 3);
+            this.label2.Location = new System.Drawing.Point(12, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 22);
             this.label2.TabIndex = 9;
@@ -518,11 +572,11 @@
             this.panel3.Controls.Add(this.bt_insert);
             this.panel3.Controls.Add(this.txt_name);
             this.panel3.Controls.Add(this.txt_username);
+            this.panel3.Controls.Add(this.txt_password);
+            this.panel3.Controls.Add(this.txt_link);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txt_password);
-            this.panel3.Controls.Add(this.txt_link);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 317);
@@ -533,7 +587,7 @@
             // bt_Auto
             // 
             this.bt_Auto.Font = new System.Drawing.Font("IRANSansWeb", 8.749999F);
-            this.bt_Auto.Location = new System.Drawing.Point(624, 76);
+            this.bt_Auto.Location = new System.Drawing.Point(627, 76);
             this.bt_Auto.Name = "bt_Auto";
             this.bt_Auto.Size = new System.Drawing.Size(114, 30);
             this.bt_Auto.TabIndex = 23;
@@ -544,7 +598,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("IRANSansWeb", 8.749999F);
-            this.button1.Location = new System.Drawing.Point(491, 76);
+            this.button1.Location = new System.Drawing.Point(495, 76);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 30);
             this.button1.TabIndex = 22;
@@ -555,7 +609,7 @@
             // bu_clipbord
             // 
             this.bu_clipbord.Font = new System.Drawing.Font("IRANSansWeb", 8.749999F);
-            this.bu_clipbord.Location = new System.Drawing.Point(354, 76);
+            this.bu_clipbord.Location = new System.Drawing.Point(360, 76);
             this.bu_clipbord.Name = "bu_clipbord";
             this.bu_clipbord.Size = new System.Drawing.Size(131, 30);
             this.bu_clipbord.TabIndex = 20;
@@ -611,6 +665,19 @@
             this.panel5.Size = new System.Drawing.Size(362, 220);
             this.panel5.TabIndex = 21;
             // 
+            // txt_Description
+            // 
+            this.txt_Description.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Description.Location = new System.Drawing.Point(3, 44);
+            this.txt_Description.MaxLength = 250;
+            this.txt_Description.Multiline = true;
+            this.txt_Description.Name = "txt_Description";
+            this.txt_Description.Size = new System.Drawing.Size(350, 175);
+            this.txt_Description.TabIndex = 25;
+            this.txt_Description.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_Description.MouseLeave += new System.EventHandler(this.txt_Description_MouseLeave);
+            this.txt_Description.MouseHover += new System.EventHandler(this.txt_Description_MouseHover);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -619,76 +686,6 @@
             this.label7.Size = new System.Drawing.Size(80, 22);
             this.label7.TabIndex = 24;
             this.label7.Text = "Description";
-            // 
-            // txt_Description
-            // 
-            this.txt_Description.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Description.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txt_Description.Location = new System.Drawing.Point(0, 45);
-            this.txt_Description.MaxLength = 250;
-            this.txt_Description.Multiline = true;
-            this.txt_Description.Name = "txt_Description";
-            this.txt_Description.Size = new System.Drawing.Size(362, 175);
-            this.txt_Description.TabIndex = 25;
-            this.txt_Description.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_Description.MouseLeave += new System.EventHandler(this.txt_Description_MouseLeave);
-            this.txt_Description.MouseHover += new System.EventHandler(this.txt_Description_MouseHover);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            this.id.Width = 46;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
-            this.name.DefaultCellStyle = dataGridViewCellStyle17;
-            this.name.HeaderText = "Name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // link
-            // 
-            this.link.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
-            this.link.DefaultCellStyle = dataGridViewCellStyle18;
-            this.link.HeaderText = "Login Link";
-            this.link.Name = "link";
-            this.link.ReadOnly = true;
-            // 
-            // username
-            // 
-            this.username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
-            this.username.DefaultCellStyle = dataGridViewCellStyle19;
-            this.username.HeaderText = "User Name";
-            this.username.Name = "username";
-            this.username.ReadOnly = true;
-            // 
-            // password
-            // 
-            this.password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
-            this.password.DefaultCellStyle = dataGridViewCellStyle20;
-            this.password.HeaderText = "Password";
-            this.password.Name = "password";
-            this.password.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Visible = false;
-            this.Description.Width = 105;
             // 
             // Form1
             // 
