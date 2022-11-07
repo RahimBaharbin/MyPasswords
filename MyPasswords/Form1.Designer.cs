@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -151,9 +151,9 @@
             // name
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
-            this.name.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
+            this.name.DefaultCellStyle = dataGridViewCellStyle9;
             this.name.HeaderText = "Name";
             this.name.Name = "name";
             this.name.ReadOnly = true;
@@ -161,9 +161,9 @@
             // link
             // 
             this.link.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
-            this.link.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
+            this.link.DefaultCellStyle = dataGridViewCellStyle10;
             this.link.HeaderText = "Login Link";
             this.link.Name = "link";
             this.link.ReadOnly = true;
@@ -171,9 +171,9 @@
             // username
             // 
             this.username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
-            this.username.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
+            this.username.DefaultCellStyle = dataGridViewCellStyle11;
             this.username.HeaderText = "User Name";
             this.username.Name = "username";
             this.username.ReadOnly = true;
@@ -181,9 +181,9 @@
             // password
             // 
             this.password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
-            this.password.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("IRANSansWeb", 8.75F);
+            this.password.DefaultCellStyle = dataGridViewCellStyle12;
             this.password.HeaderText = "Password";
             this.password.Name = "password";
             this.password.ReadOnly = true;
@@ -248,14 +248,15 @@
             // 
             // txt_Search
             // 
-            this.txt_Search.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Search.Font = new System.Drawing.Font("IRANSansWeb", 8.749999F);
             this.txt_Search.ForeColor = System.Drawing.Color.Red;
-            this.txt_Search.Location = new System.Drawing.Point(95, 16);
+            this.txt_Search.Location = new System.Drawing.Point(95, 12);
             this.txt_Search.Name = "txt_Search";
-            this.txt_Search.Size = new System.Drawing.Size(216, 20);
+            this.txt_Search.Size = new System.Drawing.Size(216, 27);
             this.txt_Search.TabIndex = 3;
             this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
+            this.txt_Search.MouseLeave += new System.EventHandler(this.txt_Search_MouseLeave);
+            this.txt_Search.MouseHover += new System.EventHandler(this.txt_Search_MouseHover);
             // 
             // button3
             // 

@@ -63,6 +63,7 @@ namespace MyPasswords
                                             ds.Tables[0].Rows[i].ItemArray[col.IndexOf("password")].ToString(),
                                             ds.Tables[0].Rows[i].ItemArray[col.IndexOf("description")].ToString());
                     }
+                    ClearTextBox();
                     try
                     {
                         tsl_count.Text = ds.Tables[0].Rows.Count.ToString();
@@ -89,7 +90,6 @@ namespace MyPasswords
             try
             {
                 comBox_SearchType.SelectedIndex = 0;
-                ChangeLang();
                 FillDataGridView();
             }
             catch(SQLiteException ex) 
@@ -214,19 +214,15 @@ namespace MyPasswords
         {
            
         }
-        private void ChangeLang() {
-            CultureInfo languagee = new CultureInfo(CultureInfo.InstalledUICulture.Name);
-            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(languagee);
-        }
+
         private void txt_Search_TextChanged(object sender, EventArgs e)
         {
-            ChangeLang();
             try
             {
+                ClearTextBox();
                 if (string.IsNullOrEmpty(txt_Search.Text))
                 {
                     FillDataGridView();
-                    ClearTextBox();
                     txt_Search.Select();
                     return;
                 }
@@ -566,7 +562,8 @@ namespace MyPasswords
         {
             try
             {
-                ChangeLang();
+                CultureInfo languagee = new CultureInfo(CultureInfo.InstalledUICulture.Name);
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(languagee);
             }
             catch 
             {
@@ -583,6 +580,18 @@ namespace MyPasswords
             catch
             {
             }
+        }
+
+        private void txt_Search_MouseHover(object sender, EventArgs e)
+        {
+            CultureInfo languagee = new CultureInfo(CultureInfo.InstalledUICulture.Name);
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(languagee);
+        }
+
+        private void txt_Search_MouseLeave(object sender, EventArgs e)
+        {
+            CultureInfo c = new CultureInfo("Fa-IR");
+            Application.CurrentInputLanguage = InputLanguage.FromCulture(c);
         }
     }
 }
