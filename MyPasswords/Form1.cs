@@ -252,7 +252,7 @@ namespace MyPasswords
 
                         case 1:
                             DataSet ds_username = new DataSet();
-                            SQLiteDataAdapter daa = new SQLiteDataAdapter("select ID,name,url,username,password ,description from Link description username like '%" + txt_Search.Text + "%'", con);
+                            SQLiteDataAdapter daa = new SQLiteDataAdapter("select ID,name,url,username,password ,description from Link where username like '%" + txt_Search.Text + "%'", con);
                             daa.Fill(ds_username);
                             daa.Dispose();
                             DataColumnCollection coll = ds_username.Tables[0].Columns;
