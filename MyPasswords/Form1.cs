@@ -562,10 +562,9 @@ namespace MyPasswords
         {
             try
             {
-                CultureInfo languagee = new CultureInfo(CultureInfo.InstalledUICulture.Name);
-                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(languagee);
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo(CultureInfo.InstalledUICulture.Name));
             }
-            catch 
+            catch
             {
             }
         }
@@ -574,8 +573,7 @@ namespace MyPasswords
         {
             try
             {
-                CultureInfo c = new CultureInfo("Fa-IR");
-                Application.CurrentInputLanguage = InputLanguage.FromCulture(c);
+                Application.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo("Fa-IR"));
             }
             catch
             {
@@ -584,14 +582,23 @@ namespace MyPasswords
 
         private void txt_Search_MouseHover(object sender, EventArgs e)
         {
-            CultureInfo languagee = new CultureInfo(CultureInfo.InstalledUICulture.Name);
-            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(languagee);
+            try
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo(CultureInfo.InstalledUICulture.Name));
+            }
+            catch
+            { }
         }
 
         private void txt_Search_MouseLeave(object sender, EventArgs e)
         {
-            CultureInfo c = new CultureInfo("Fa-IR");
-            Application.CurrentInputLanguage = InputLanguage.FromCulture(c);
+            try
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new CultureInfo(CultureInfo.InstalledUICulture.Name));
+            }
+            catch 
+            {
+            }           
         }
     }
 }
